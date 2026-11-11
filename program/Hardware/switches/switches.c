@@ -13,6 +13,7 @@ void switches_state_init(void)
     if(buck_adj_get_now_switch_state() == SWITCH_CLOSE){
         buck_adj_switch_last_state = SWITCH_CLOSE;
         buck_adj_hide_flag = HIDE_NOT;
+        buck_adj_driver_off();
     }else{
         buck_adj_switch_last_state = SWITCH_OPEN;
         buck_adj_hide_flag = HIDE_OK;
@@ -22,6 +23,7 @@ void switches_state_init(void)
     if(boost_adj_get_now_switch_state() == SWITCH_CLOSE){
         boost_adj_switch_last_state = SWITCH_CLOSE;
         boost_adj_hide_flag = HIDE_NOT;
+        boost_adj_driver_off();
     }else{
         boost_adj_switch_last_state = SWITCH_OPEN;
         boost_adj_hide_flag = HIDE_OK;

@@ -105,18 +105,28 @@ int main(void)
   OLED_ShowString(4, 1, "Voltmeter:");
 
   HAL_ADC_Start_DMA(&hadc1, (uint32_t*)adc_data, 3);
+  /* 不使用 DMA 传输完成回调，关闭 TC 中断，避免 48kHz 中断持续打断软件 I2C */
+  __HAL_DMA_DISABLE_IT(hadc1.DMA_Handle, DMA_IT_TC);
 
   switches_state_init();
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  uint32_t last_refresh = HAL_GetTick();
+
   while (1)
   {
-      //电压转换
-      voltage_conversion();
-      //电压显示
-      voltage_display();
+      if ((HAL_GetTick() - last_refresh) >= 100U)
+      {
+          last_refresh += 100U;
+          //电压转换
+          voltage_conversion();
+          //电压显示
+          voltage_display();
+      }
+
+      __WFI();
 
     /* USER CODE END WHILE */
 

@@ -5,6 +5,21 @@
 #define OLED_W_SCL(x)    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, (GPIO_PinState)x)
 #define OLED_W_SDA(x)    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, (GPIO_PinState)x)
 
+/* 软件 I2C 半周期延时。SSD1306 上限 400kHz，半周期约 1.25us。
+ * -O0 下 12 次空循环约 1us 左右；用示波器看 PB1(SCL)，过快/过慢时调整该值。 */
+#define OLED_I2C_DELAY_LOOPS    12U
+
+static void OLED_I2C_Delay(void)
+{
+    for (volatile uint32_t i = 0; i < OLED_I2C_DELAY_LOOPS; i++)
+    {
+        __NOP();
+    }
+}
+
+/* 前置声明：OLED_WriteDataBuffer 重试时需要重新设置光标 */
+void OLED_SetCursor(uint8_t Y, uint8_t X);
+
 /* 引脚初始化：适配HAL库GPIO初始化 */
 void OLED_I2C_Init(void)
 {
@@ -16,7 +31,7 @@ void OLED_I2C_Init(void)
     /* 配置PB8、PB9为开漏输出 */
     GPIO_InitStructure.Pin = GPIO_PIN_1 | GPIO_PIN_0;
     GPIO_InitStructure.Mode = GPIO_MODE_OUTPUT_OD;  // 开漏输出（与标准库一致）
-    GPIO_InitStructure.Pull = GPIO_NOPULL;          // 无上下拉
+    GPIO_InitStructure.Pull = GPIO_PULLUP;          // 内部弱上拉，外部模块还有 4.7k 上拉
     GPIO_InitStructure.Speed = GPIO_SPEED_FREQ_HIGH;// 高速（对应50MHz）
     HAL_GPIO_Init(GPIOB, &GPIO_InitStructure);
 
@@ -33,9 +48,13 @@ void OLED_I2C_Init(void)
 void OLED_I2C_Start(void)
 {
     OLED_W_SDA(1);
+    OLED_I2C_Delay();
     OLED_W_SCL(1);
+    OLED_I2C_Delay();
     OLED_W_SDA(0);
+    OLED_I2C_Delay();
     OLED_W_SCL(0);
+    OLED_I2C_Delay();
 }
 
 /**
@@ -46,26 +65,45 @@ void OLED_I2C_Start(void)
 void OLED_I2C_Stop(void)
 {
     OLED_W_SDA(0);
+    OLED_I2C_Delay();
     OLED_W_SCL(1);
+    OLED_I2C_Delay();
     OLED_W_SDA(1);
+    OLED_I2C_Delay();
 }
 
 /**
-  * @brief  I2C发送一个字节
+  * @brief  I2C发送一个字节并读取应答
   * @param  Byte 要发送的一个字节
-  * @retval 无
+  * @retval 1：收到 ACK；0：收到 NACK
   */
-void OLED_I2C_SendByte(uint8_t Byte)
+uint8_t OLED_I2C_SendByte(uint8_t Byte)
 {
     uint8_t i;
+    uint8_t ack;
+
     for (i = 0; i < 8; i++)
     {
         OLED_W_SDA(!!(Byte & (0x80 >> i)));
+        OLED_I2C_Delay();
         OLED_W_SCL(1);
+        OLED_I2C_Delay();
         OLED_W_SCL(0);
+        OLED_I2C_Delay();
     }
-    OLED_W_SCL(1);  //额外的一个时钟，不处理应答信号
+
+    /* 第 9 个时钟：释放 SDA，读取从机应答 */
+    OLED_W_SDA(1);
+    OLED_I2C_Delay();
+    OLED_W_SCL(1);
+    OLED_I2C_Delay();
+
+    ack = (HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_0) == GPIO_PIN_RESET) ? 1U : 0U;
+
     OLED_W_SCL(0);
+    OLED_I2C_Delay();
+
+    return ack;
 }
 
 /**
@@ -75,11 +113,21 @@ void OLED_I2C_SendByte(uint8_t Byte)
   */
 void OLED_WriteCommand(uint8_t Command)
 {
-    OLED_I2C_Start();
-    OLED_I2C_SendByte(0x78);        //从机地址
-    OLED_I2C_SendByte(0x00);        //写命令
-    OLED_I2C_SendByte(Command);
-    OLED_I2C_Stop();
+    uint8_t retry;
+
+    for (retry = 0; retry < 3U; retry++)
+    {
+        OLED_I2C_Start();
+        if (OLED_I2C_SendByte(0x78) &&       //从机地址
+            OLED_I2C_SendByte(0x00) &&       //写命令
+            OLED_I2C_SendByte(Command))
+        {
+            OLED_I2C_Stop();
+            return;
+        }
+        OLED_I2C_Stop();
+        OLED_I2C_Delay();
+    }
 }
 
 /**
@@ -89,11 +137,66 @@ void OLED_WriteCommand(uint8_t Command)
   */
 void OLED_WriteData(uint8_t Data)
 {
-    OLED_I2C_Start();
-    OLED_I2C_SendByte(0x78);        //从机地址
-    OLED_I2C_SendByte(0x40);        //写数据
-    OLED_I2C_SendByte(Data);
-    OLED_I2C_Stop();
+    uint8_t retry;
+
+    for (retry = 0; retry < 3U; retry++)
+    {
+        OLED_I2C_Start();
+        if (OLED_I2C_SendByte(0x78) &&       //从机地址
+            OLED_I2C_SendByte(0x40) &&       //写数据
+            OLED_I2C_SendByte(Data))
+        {
+            OLED_I2C_Stop();
+            return;
+        }
+        OLED_I2C_Stop();
+        OLED_I2C_Delay();
+    }
+}
+
+/**
+  * @brief  OLED连续写多个数据字节（一次 Start/Stop，减少事务开销）
+  * @param  Y 页地址，范围：0~7
+  * @param  X 列地址，范围：0~127
+  * @param  Data 数据缓冲区
+  * @param  Length 数据长度
+  * @retval 无
+  * @note   每次重试都会重新设置光标，避免半包写入后光标错位
+  */
+static void OLED_WriteDataBuffer(uint8_t Y, uint8_t X, const uint8_t *Data, uint8_t Length)
+{
+    uint8_t retry;
+
+    for (retry = 0; retry < 3U; retry++)
+    {
+        uint8_t i;
+        uint8_t ok = 1U;
+
+        OLED_SetCursor(Y, X);
+        OLED_I2C_Start();
+        if (!OLED_I2C_SendByte(0x78) || !OLED_I2C_SendByte(0x40))
+        {
+            ok = 0U;
+        }
+        else
+        {
+            for (i = 0; i < Length; i++)
+            {
+                if (!OLED_I2C_SendByte(Data[i]))
+                {
+                    ok = 0U;
+                    break;
+                }
+            }
+        }
+        OLED_I2C_Stop();
+
+        if (ok)
+        {
+            return;
+        }
+        OLED_I2C_Delay();
+    }
 }
 
 /**
@@ -117,12 +220,13 @@ void OLED_SetCursor(uint8_t Y, uint8_t X)
 void OLED_Clear(void)
 {
     uint8_t i, j;
+    uint8_t zero[16] = {0};
+
     for (j = 0; j < 8; j++)
     {
-        OLED_SetCursor(j, 0);
-        for(i = 0; i < 128; i++)
+        for (i = 0; i < 8; i++)
         {
-            OLED_WriteData(0x00);
+            OLED_WriteDataBuffer(j, (uint8_t)(i * 16U), zero, 16U);
         }
     }
 }
@@ -137,16 +241,19 @@ void OLED_Clear(void)
 void OLED_ShowChar(uint8_t Line, uint8_t Column, uint8_t Char)
 {
     uint8_t i;
-    OLED_SetCursor((Line - 1) * 2, (Column - 1) * 8);        //设置光标位置在上半部分
+    uint8_t buf[8];
+
     for (i = 0; i < 8; i++)
     {
-        OLED_WriteData(OLED_F8x16[Char - ' '][i]);            //显示上半部分内容
+        buf[i] = OLED_F8x16[Char - ' '][i];                  //上半部分内容
     }
-    OLED_SetCursor((Line - 1) * 2 + 1, (Column - 1) * 8);    //设置光标位置在下半部分
+    OLED_WriteDataBuffer((uint8_t)((Line - 1) * 2), (uint8_t)((Column - 1) * 8), buf, 8U);
+
     for (i = 0; i < 8; i++)
     {
-        OLED_WriteData(OLED_F8x16[Char - ' '][i + 8]);        //显示下半部分内容
+        buf[i] = OLED_F8x16[Char - ' '][i + 8];              //下半部分内容
     }
+    OLED_WriteDataBuffer((uint8_t)((Line - 1) * 2 + 1), (uint8_t)((Column - 1) * 8), buf, 8U);
 }
 
 /**
@@ -156,12 +263,12 @@ void OLED_ShowChar(uint8_t Line, uint8_t Column, uint8_t Char)
   * @param  String 要显示的字符串，范围：ASCII可见字符
   * @retval 无
   */
-void OLED_ShowString(uint8_t Line, uint8_t Column, uint8_t String[])
+void OLED_ShowString(uint8_t Line, uint8_t Column, const char String[])
 {
     uint8_t i;
     for (i = 0; String[i] != '\0'; i++)
     {
-        OLED_ShowChar(Line, Column + i, String[i]);
+        OLED_ShowChar(Line, Column + i, (uint8_t)String[i]);
     }
 }
 
