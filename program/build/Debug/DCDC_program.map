@@ -1957,6 +1957,8 @@ Discarded input sections
  .group         0x00000000        0xc CMakeFiles/DCDC_program.dir/Core/Src/main.c.obj
  .group         0x00000000        0xc CMakeFiles/DCDC_program.dir/Core/Src/main.c.obj
  .group         0x00000000        0xc CMakeFiles/DCDC_program.dir/Core/Src/main.c.obj
+ .group         0x00000000        0xc CMakeFiles/DCDC_program.dir/Core/Src/main.c.obj
+ .group         0x00000000        0xc CMakeFiles/DCDC_program.dir/Core/Src/main.c.obj
  .text          0x00000000        0x0 CMakeFiles/DCDC_program.dir/Core/Src/main.c.obj
  .data          0x00000000        0x0 CMakeFiles/DCDC_program.dir/Core/Src/main.c.obj
  .bss           0x00000000        0x0 CMakeFiles/DCDC_program.dir/Core/Src/main.c.obj
@@ -2236,6 +2238,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x8ed CMakeFiles/DCDC_program.dir/Core/Src/dma.c.obj
  .debug_macro   0x00000000       0x83 CMakeFiles/DCDC_program.dir/Core/Src/dma.c.obj
  .debug_macro   0x00000000       0x64 CMakeFiles/DCDC_program.dir/Core/Src/dma.c.obj
+ .group         0x00000000        0xc CMakeFiles/DCDC_program.dir/Core/Src/tim.c.obj
  .group         0x00000000        0xc CMakeFiles/DCDC_program.dir/Core/Src/tim.c.obj
  .group         0x00000000        0xc CMakeFiles/DCDC_program.dir/Core/Src/tim.c.obj
  .group         0x00000000        0xc CMakeFiles/DCDC_program.dir/Core/Src/tim.c.obj
@@ -2791,6 +2794,8 @@ Discarded input sections
  .group         0x00000000        0xc CMakeFiles/DCDC_program.dir/Hardware/switches/switches.c.obj
  .group         0x00000000        0xc CMakeFiles/DCDC_program.dir/Hardware/switches/switches.c.obj
  .group         0x00000000        0xc CMakeFiles/DCDC_program.dir/Hardware/switches/switches.c.obj
+ .group         0x00000000        0xc CMakeFiles/DCDC_program.dir/Hardware/switches/switches.c.obj
+ .group         0x00000000        0xc CMakeFiles/DCDC_program.dir/Hardware/switches/switches.c.obj
  .text          0x00000000        0x0 CMakeFiles/DCDC_program.dir/Hardware/switches/switches.c.obj
  .data          0x00000000        0x0 CMakeFiles/DCDC_program.dir/Hardware/switches/switches.c.obj
  .bss           0x00000000        0x0 CMakeFiles/DCDC_program.dir/Hardware/switches/switches.c.obj
@@ -2832,6 +2837,10 @@ Discarded input sections
  .debug_macro   0x00000000      0x8ed CMakeFiles/DCDC_program.dir/Hardware/switches/switches.c.obj
  .debug_macro   0x00000000       0x83 CMakeFiles/DCDC_program.dir/Hardware/switches/switches.c.obj
  .debug_macro   0x00000000       0x64 CMakeFiles/DCDC_program.dir/Hardware/switches/switches.c.obj
+ .debug_macro   0x00000000       0x10 CMakeFiles/DCDC_program.dir/Hardware/switches/switches.c.obj
+ .debug_macro   0x00000000       0x10 CMakeFiles/DCDC_program.dir/Hardware/switches/switches.c.obj
+ .group         0x00000000        0xc CMakeFiles/DCDC_program.dir/Hardware/oled/oled_show.c.obj
+ .group         0x00000000        0xc CMakeFiles/DCDC_program.dir/Hardware/oled/oled_show.c.obj
  .group         0x00000000        0xc CMakeFiles/DCDC_program.dir/Hardware/oled/oled_show.c.obj
  .group         0x00000000        0xc CMakeFiles/DCDC_program.dir/Hardware/oled/oled_show.c.obj
  .group         0x00000000        0xc CMakeFiles/DCDC_program.dir/Hardware/oled/oled_show.c.obj
@@ -2911,6 +2920,8 @@ Discarded input sections
  .debug_macro   0x00000000      0x8ed CMakeFiles/DCDC_program.dir/Hardware/oled/oled_show.c.obj
  .debug_macro   0x00000000       0x83 CMakeFiles/DCDC_program.dir/Hardware/oled/oled_show.c.obj
  .debug_macro   0x00000000       0x64 CMakeFiles/DCDC_program.dir/Hardware/oled/oled_show.c.obj
+ .debug_macro   0x00000000       0x10 CMakeFiles/DCDC_program.dir/Hardware/oled/oled_show.c.obj
+ .debug_macro   0x00000000       0x10 CMakeFiles/DCDC_program.dir/Hardware/oled/oled_show.c.obj
  .text          0x00000000      0x168 D:/ARM_GCC/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp\libgcc.a(_arm_mulsf3.o)
  .data          0x00000000        0x0 D:/ARM_GCC/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp\libgcc.a(_arm_mulsf3.o)
  .bss           0x00000000        0x0 D:/ARM_GCC/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp\libgcc.a(_arm_mulsf3.o)
@@ -3212,7 +3223,7 @@ LOAD D:/ARM_GCC/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp/crtn.o
                 0x08000000                g_pfnVectors
                 0x0800010c                        . = ALIGN (0x4)
 
-.text           0x0800010c     0x3d20
+.text           0x0800010c     0x3d34
                 0x0800010c                        . = ALIGN (0x4)
  *(.text)
  .text          0x0800010c      0x21c D:/ARM_GCC/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp\libgcc.a(_arm_addsubsf3.o)
@@ -3592,146 +3603,146 @@ LOAD D:/ARM_GCC/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp/crtn.o
                 0x08003910       0xa0 CMakeFiles/DCDC_program.dir/Hardware/oled/oled.c.obj
                 0x08003910                OLED_Init
  .text.switches_state_init
-                0x080039b0       0x58 CMakeFiles/DCDC_program.dir/Hardware/switches/switches.c.obj
+                0x080039b0       0x68 CMakeFiles/DCDC_program.dir/Hardware/switches/switches.c.obj
                 0x080039b0                switches_state_init
  .text.buck_adj_get_last_switch_state
-                0x08003a08       0x14 CMakeFiles/DCDC_program.dir/Hardware/switches/switches.c.obj
-                0x08003a08                buck_adj_get_last_switch_state
+                0x08003a18       0x14 CMakeFiles/DCDC_program.dir/Hardware/switches/switches.c.obj
+                0x08003a18                buck_adj_get_last_switch_state
  .text.buck_adj_get_now_switch_state
-                0x08003a1c       0x18 CMakeFiles/DCDC_program.dir/Hardware/switches/switches.c.obj
-                0x08003a1c                buck_adj_get_now_switch_state
- .text.buck_adj_set_now_switches_state
-                0x08003a34       0x20 CMakeFiles/DCDC_program.dir/Hardware/switches/switches.c.obj
-                0x08003a34                buck_adj_set_now_switches_state
+                0x08003a2c       0x18 CMakeFiles/DCDC_program.dir/Hardware/switches/switches.c.obj
+                0x08003a2c                buck_adj_get_now_switch_state
+ .text.buck_adj_set_now_switch_state
+                0x08003a44       0x20 CMakeFiles/DCDC_program.dir/Hardware/switches/switches.c.obj
+                0x08003a44                buck_adj_set_now_switch_state
  .text.buck_adj_driver_on
-                0x08003a54       0x18 CMakeFiles/DCDC_program.dir/Hardware/switches/switches.c.obj
-                0x08003a54                buck_adj_driver_on
+                0x08003a64       0x18 CMakeFiles/DCDC_program.dir/Hardware/switches/switches.c.obj
+                0x08003a64                buck_adj_driver_on
  .text.buck_adj_driver_off
-                0x08003a6c       0x18 CMakeFiles/DCDC_program.dir/Hardware/switches/switches.c.obj
-                0x08003a6c                buck_adj_driver_off
+                0x08003a7c       0x18 CMakeFiles/DCDC_program.dir/Hardware/switches/switches.c.obj
+                0x08003a7c                buck_adj_driver_off
  .text.boost_adj_get_last_switch_state
-                0x08003a84       0x14 CMakeFiles/DCDC_program.dir/Hardware/switches/switches.c.obj
-                0x08003a84                boost_adj_get_last_switch_state
+                0x08003a94       0x14 CMakeFiles/DCDC_program.dir/Hardware/switches/switches.c.obj
+                0x08003a94                boost_adj_get_last_switch_state
  .text.boost_adj_get_now_switch_state
-                0x08003a98       0x18 CMakeFiles/DCDC_program.dir/Hardware/switches/switches.c.obj
-                0x08003a98                boost_adj_get_now_switch_state
- .text.boost_adj_set_now_switches_state
-                0x08003ab0       0x20 CMakeFiles/DCDC_program.dir/Hardware/switches/switches.c.obj
-                0x08003ab0                boost_adj_set_now_switches_state
+                0x08003aa8       0x18 CMakeFiles/DCDC_program.dir/Hardware/switches/switches.c.obj
+                0x08003aa8                boost_adj_get_now_switch_state
+ .text.boost_adj_set_now_switch_state
+                0x08003ac0       0x20 CMakeFiles/DCDC_program.dir/Hardware/switches/switches.c.obj
+                0x08003ac0                boost_adj_set_now_switch_state
  .text.boost_adj_driver_on
-                0x08003ad0       0x18 CMakeFiles/DCDC_program.dir/Hardware/switches/switches.c.obj
-                0x08003ad0                boost_adj_driver_on
+                0x08003ae0       0x18 CMakeFiles/DCDC_program.dir/Hardware/switches/switches.c.obj
+                0x08003ae0                boost_adj_driver_on
  .text.boost_adj_driver_off
-                0x08003ae8       0x18 CMakeFiles/DCDC_program.dir/Hardware/switches/switches.c.obj
-                0x08003ae8                boost_adj_driver_off
- .text.voltage_calculation
-                0x08003b00      0x188 CMakeFiles/DCDC_program.dir/Hardware/oled/oled_show.c.obj
-                0x08003b00                voltage_calculation
+                0x08003af8       0x18 CMakeFiles/DCDC_program.dir/Hardware/switches/switches.c.obj
+                0x08003af8                boost_adj_driver_off
+ .text.voltage_conversion
+                0x08003b10      0x18c CMakeFiles/DCDC_program.dir/Hardware/oled/oled_show.c.obj
+                0x08003b10                voltage_conversion
  .text.voltage_display
-                0x08003c88      0x134 CMakeFiles/DCDC_program.dir/Hardware/oled/oled_show.c.obj
-                0x08003c88                voltage_display
- .text.memset   0x08003dbc       0x10 D:/ARM_GCC/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(libc_a-memset.o)
-                0x08003dbc                memset
+                0x08003c9c      0x134 CMakeFiles/DCDC_program.dir/Hardware/oled/oled_show.c.obj
+                0x08003c9c                voltage_display
+ .text.memset   0x08003dd0       0x10 D:/ARM_GCC/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(libc_a-memset.o)
+                0x08003dd0                memset
  .text.__libc_init_array
-                0x08003dcc       0x48 D:/ARM_GCC/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(libc_a-init.o)
-                0x08003dcc                __libc_init_array
+                0x08003de0       0x48 D:/ARM_GCC/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(libc_a-init.o)
+                0x08003de0                __libc_init_array
  *(.glue_7)
- .glue_7        0x08003e14        0x0 linker stubs
+ .glue_7        0x08003e28        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x08003e14        0x0 linker stubs
+ .glue_7t       0x08003e28        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x08003e14        0x0 D:/ARM_GCC/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp/crtbegin.o
+ .eh_frame      0x08003e28        0x0 D:/ARM_GCC/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp/crtbegin.o
  *(.init)
- .init          0x08003e14        0x4 D:/ARM_GCC/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp/crti.o
-                0x08003e14                _init
- .init          0x08003e18        0x8 D:/ARM_GCC/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp/crtn.o
+ .init          0x08003e28        0x4 D:/ARM_GCC/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp/crti.o
+                0x08003e28                _init
+ .init          0x08003e2c        0x8 D:/ARM_GCC/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp/crtn.o
  *(.fini)
- .fini          0x08003e20        0x4 D:/ARM_GCC/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp/crti.o
-                0x08003e20                _fini
- .fini          0x08003e24        0x8 D:/ARM_GCC/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp/crtn.o
-                0x08003e2c                        . = ALIGN (0x4)
-                0x08003e2c                        _etext = .
+ .fini          0x08003e34        0x4 D:/ARM_GCC/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp/crti.o
+                0x08003e34                _fini
+ .fini          0x08003e38        0x8 D:/ARM_GCC/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp/crtn.o
+                0x08003e40                        . = ALIGN (0x4)
+                0x08003e40                        _etext = .
 
-.vfp11_veneer   0x08003e2c        0x0
- .vfp11_veneer  0x08003e2c        0x0 linker stubs
+.vfp11_veneer   0x08003e40        0x0
+ .vfp11_veneer  0x08003e40        0x0 linker stubs
 
-.v4_bx          0x08003e2c        0x0
- .v4_bx         0x08003e2c        0x0 linker stubs
+.v4_bx          0x08003e40        0x0
+ .v4_bx         0x08003e40        0x0 linker stubs
 
-.iplt           0x08003e2c        0x0
- .iplt          0x08003e2c        0x0 D:/ARM_GCC/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp/crtbegin.o
+.iplt           0x08003e40        0x0
+ .iplt          0x08003e40        0x0 D:/ARM_GCC/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp/crtbegin.o
 
-.rodata         0x08003e2c      0x674
-                0x08003e2c                        . = ALIGN (0x4)
+.rodata         0x08003e40      0x674
+                0x08003e40                        . = ALIGN (0x4)
  *(.rodata)
- .rodata        0x08003e2c       0x33 CMakeFiles/DCDC_program.dir/Core/Src/main.c.obj
- *fill*         0x08003e5f        0x1 
- .rodata        0x08003e60        0xf CMakeFiles/DCDC_program.dir/Hardware/oled/oled_show.c.obj
+ .rodata        0x08003e40       0x33 CMakeFiles/DCDC_program.dir/Core/Src/main.c.obj
+ *fill*         0x08003e73        0x1 
+ .rodata        0x08003e74        0xf CMakeFiles/DCDC_program.dir/Hardware/oled/oled_show.c.obj
  *(.rodata*)
- *fill*         0x08003e6f        0x1 
+ *fill*         0x08003e83        0x1 
  .rodata.AHBPrescTable
-                0x08003e70       0x10 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f1xx.c.obj
-                0x08003e70                AHBPrescTable
+                0x08003e84       0x10 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f1xx.c.obj
+                0x08003e84                AHBPrescTable
  .rodata.APBPrescTable
-                0x08003e80        0x8 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f1xx.c.obj
-                0x08003e80                APBPrescTable
+                0x08003e94        0x8 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f1xx.c.obj
+                0x08003e94                APBPrescTable
  .rodata.aPLLMULFactorTable.1
-                0x08003e88       0x10 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
+                0x08003e9c       0x10 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
  .rodata.aPredivFactorTable.0
-                0x08003e98        0x2 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
- *fill*         0x08003e9a        0x2 
- .rodata.aPLLMULFactorTable.1
-                0x08003e9c       0x10 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c.obj
- .rodata.aPredivFactorTable.0
-                0x08003eac        0x2 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c.obj
+                0x08003eac        0x2 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
  *fill*         0x08003eae        0x2 
+ .rodata.aPLLMULFactorTable.1
+                0x08003eb0       0x10 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c.obj
+ .rodata.aPredivFactorTable.0
+                0x08003ec0        0x2 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c.obj
+ *fill*         0x08003ec2        0x2 
  .rodata.OLED_F8x16
-                0x08003eb0      0x5f0 CMakeFiles/DCDC_program.dir/Hardware/oled/oled.c.obj
-                0x08003eb0                OLED_F8x16
-                0x080044a0                        . = ALIGN (0x4)
+                0x08003ec4      0x5f0 CMakeFiles/DCDC_program.dir/Hardware/oled/oled.c.obj
+                0x08003ec4                OLED_F8x16
+                0x080044b4                        . = ALIGN (0x4)
 
-.ARM.extab      0x080044a0        0x0
-                0x080044a0                        . = ALIGN (0x4)
+.ARM.extab      0x080044b4        0x0
+                0x080044b4                        . = ALIGN (0x4)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x080044a0                        . = ALIGN (0x4)
+                0x080044b4                        . = ALIGN (0x4)
 
-.ARM            0x080044a0        0x0
-                0x080044a0                        . = ALIGN (0x4)
-                0x080044a0                        __exidx_start = .
+.ARM            0x080044b4        0x0
+                0x080044b4                        . = ALIGN (0x4)
+                0x080044b4                        __exidx_start = .
  *(.ARM.exidx*)
-                0x080044a0                        __exidx_end = .
-                0x080044a0                        . = ALIGN (0x4)
+                0x080044b4                        __exidx_end = .
+                0x080044b4                        . = ALIGN (0x4)
 
-.preinit_array  0x080044a0        0x0
-                0x080044a0                        . = ALIGN (0x4)
-                0x080044a0                        PROVIDE (__preinit_array_start = .)
+.preinit_array  0x080044b4        0x0
+                0x080044b4                        . = ALIGN (0x4)
+                0x080044b4                        PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x080044a0                        PROVIDE (__preinit_array_end = .)
-                0x080044a0                        . = ALIGN (0x4)
+                0x080044b4                        PROVIDE (__preinit_array_end = .)
+                0x080044b4                        . = ALIGN (0x4)
 
-.init_array     0x080044a0        0x4
-                0x080044a0                        . = ALIGN (0x4)
-                0x080044a0                        PROVIDE (__init_array_start = .)
+.init_array     0x080044b4        0x4
+                0x080044b4                        . = ALIGN (0x4)
+                0x080044b4                        PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x080044a0        0x4 D:/ARM_GCC/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp/crtbegin.o
-                0x080044a4                        PROVIDE (__init_array_end = .)
-                0x080044a4                        . = ALIGN (0x4)
+ .init_array    0x080044b4        0x4 D:/ARM_GCC/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp/crtbegin.o
+                0x080044b8                        PROVIDE (__init_array_end = .)
+                0x080044b8                        . = ALIGN (0x4)
 
-.fini_array     0x080044a4        0x4
-                0x080044a4                        . = ALIGN (0x4)
+.fini_array     0x080044b8        0x4
+                0x080044b8                        . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x080044a4        0x4 D:/ARM_GCC/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp/crtbegin.o
+ .fini_array    0x080044b8        0x4 D:/ARM_GCC/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp/crtbegin.o
                 [!provide]                        PROVIDE (__fini_array_end = .)
-                0x080044a8                        . = ALIGN (0x4)
-                0x080044a8                        _sidata = LOADADDR (.data)
+                0x080044bc                        . = ALIGN (0x4)
+                0x080044bc                        _sidata = LOADADDR (.data)
 
-.rel.dyn        0x080044a8        0x0
- .rel.iplt      0x080044a8        0x0 D:/ARM_GCC/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp/crtbegin.o
+.rel.dyn        0x080044bc        0x0
+ .rel.iplt      0x080044bc        0x0 D:/ARM_GCC/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp/crtbegin.o
 
-.data           0x20000000        0xc load address 0x080044a8
+.data           0x20000000        0xc load address 0x080044bc
                 0x20000000                        . = ALIGN (0x4)
                 0x20000000                        _sdata = .
  *(.data)
@@ -3751,16 +3762,16 @@ LOAD D:/ARM_GCC/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp/crtn.o
  *fill*         0x20000009        0x3 
 
 .tm_clone_table
-                0x2000000c        0x0 load address 0x080044b4
+                0x2000000c        0x0 load address 0x080044c8
  .tm_clone_table
                 0x2000000c        0x0 D:/ARM_GCC/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp/crtbegin.o
  .tm_clone_table
                 0x2000000c        0x0 D:/ARM_GCC/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp/crtend.o
 
-.igot.plt       0x2000000c        0x0 load address 0x080044b4
+.igot.plt       0x2000000c        0x0 load address 0x080044c8
  .igot.plt      0x2000000c        0x0 D:/ARM_GCC/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp/crtbegin.o
 
-.tdata          0x2000000c        0x0 load address 0x080044b4
+.tdata          0x2000000c        0x0 load address 0x080044c8
  *(.tdata .tdata.* .gnu.linkonce.td.*)
                 0x2000000c                        . = ALIGN (0x4)
                 0x2000000c                        _edata = .
@@ -3777,7 +3788,7 @@ LOAD D:/ARM_GCC/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp/crtn.o
                 [!provide]                        PROVIDE (__data_source_end = __tdata_source_end)
                 [!provide]                        PROVIDE (__data_source_size = (__data_source_end - __data_source))
 
-.tbss           0x2000000c        0x0 load address 0x080044b4
+.tbss           0x2000000c        0x0 load address 0x080044c8
                 0x2000000c                        _sbss = .
                 0x2000000c                        __bss_start__ = _sbss
  *(.tbss .tbss.*)
@@ -3794,7 +3805,7 @@ LOAD D:/ARM_GCC/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp/crtn.o
                 [!provide]                        PROVIDE (__arm32_tls_tcb_offset = MAX (0x8, __tls_align))
                 [!provide]                        PROVIDE (__arm64_tls_tcb_offset = MAX (0x10, __tls_align))
 
-.bss            0x2000000c      0x144 load address 0x080044b4
+.bss            0x2000000c      0x144 load address 0x080044c8
  *(.bss)
  *(.bss*)
  .bss.completed.1
@@ -3822,15 +3833,15 @@ LOAD D:/ARM_GCC/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp/crtn.o
                 0x20000139        0x1 CMakeFiles/DCDC_program.dir/Hardware/switches/switches.c.obj
                 0x20000139                boost_adj_switch_last_state
  *fill*         0x2000013a        0x2 
- .bss.buck_adj_transformed_data
+ .bss.buck_adj_ori_data
                 0x2000013c        0x4 CMakeFiles/DCDC_program.dir/Hardware/oled/oled_show.c.obj
-                0x2000013c                buck_adj_transformed_data
- .bss.boost_adj_transformed_data
+                0x2000013c                buck_adj_ori_data
+ .bss.boost_adj_ori_data
                 0x20000140        0x4 CMakeFiles/DCDC_program.dir/Hardware/oled/oled_show.c.obj
-                0x20000140                boost_adj_transformed_data
- .bss.voltmeter_transformed_data
+                0x20000140                boost_adj_ori_data
+ .bss.voltmeter_ori_data
                 0x20000144        0x4 CMakeFiles/DCDC_program.dir/Hardware/oled/oled_show.c.obj
-                0x20000144                voltmeter_transformed_data
+                0x20000144                voltmeter_ori_data
  .bss.buck_adj_inter
                 0x20000148        0x1 CMakeFiles/DCDC_program.dir/Hardware/oled/oled_show.c.obj
                 0x20000148                buck_adj_inter
@@ -3849,12 +3860,12 @@ LOAD D:/ARM_GCC/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp/crtn.o
  .bss.voltmeter_decimal
                 0x2000014d        0x1 CMakeFiles/DCDC_program.dir/Hardware/oled/oled_show.c.obj
                 0x2000014d                voltmeter_decimal
- .bss.buck_adj_symbol_flag
+ .bss.buck_adj_hide_flag
                 0x2000014e        0x1 CMakeFiles/DCDC_program.dir/Hardware/oled/oled_show.c.obj
-                0x2000014e                buck_adj_symbol_flag
- .bss.boost_adj_symbol_flag
+                0x2000014e                buck_adj_hide_flag
+ .bss.boost_adj_hide_flag
                 0x2000014f        0x1 CMakeFiles/DCDC_program.dir/Hardware/oled/oled_show.c.obj
-                0x2000014f                boost_adj_symbol_flag
+                0x2000014f                boost_adj_hide_flag
  *(COMMON)
                 0x20000150                        . = ALIGN (0x4)
                 0x20000150                        _ebss = .
@@ -3865,7 +3876,7 @@ LOAD D:/ARM_GCC/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp/crtn.o
                 [!provide]                        PROVIDE (__bss_size = (__bss_end - __bss_start))
 
 ._user_heap_stack
-                0x20000150      0x600 load address 0x080044b4
+                0x20000150      0x600 load address 0x080044c8
                 0x20000150                        . = ALIGN (0x8)
                 [!provide]                        PROVIDE (end = .)
                 0x20000150                        PROVIDE (_end = .)
@@ -3991,7 +4002,7 @@ LOAD linker stubs
  .comment       0x00000045        0x0 CMakeFiles/DCDC_program.dir/Hardware/oled/oled_show.c.obj
                                  0x46 (size before relaxing)
 
-.debug_info     0x00000000     0xb6ef
+.debug_info     0x00000000     0xb70b
  .debug_info    0x00000000      0x222 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f1xx.c.obj
  .debug_info    0x00000222      0xc50 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c.obj
  .debug_info    0x00000e72      0xa10 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c.obj
@@ -4003,19 +4014,19 @@ LOAD linker stubs
  .debug_info    0x00003798      0xa87 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
  .debug_info    0x0000421f     0x2959 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
  .debug_info    0x00006b78     0x149b cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj
- .debug_info    0x00008013      0x846 CMakeFiles/DCDC_program.dir/Core/Src/main.c.obj
- .debug_info    0x00008859      0x432 CMakeFiles/DCDC_program.dir/Core/Src/gpio.c.obj
- .debug_info    0x00008c8b      0x7fc CMakeFiles/DCDC_program.dir/Core/Src/adc.c.obj
- .debug_info    0x00009487      0x2cf CMakeFiles/DCDC_program.dir/Core/Src/dma.c.obj
- .debug_info    0x00009756      0xacd CMakeFiles/DCDC_program.dir/Core/Src/tim.c.obj
- .debug_info    0x0000a223      0x7a0 CMakeFiles/DCDC_program.dir/Core/Src/stm32f1xx_it.c.obj
- .debug_info    0x0000a9c3      0x1f1 CMakeFiles/DCDC_program.dir/Core/Src/stm32f1xx_hal_msp.c.obj
- .debug_info    0x0000abb4       0x30 CMakeFiles/DCDC_program.dir/startup_stm32f103xb.s.obj
- .debug_info    0x0000abe4      0x653 CMakeFiles/DCDC_program.dir/Hardware/oled/oled.c.obj
- .debug_info    0x0000b237      0x2a7 CMakeFiles/DCDC_program.dir/Hardware/switches/switches.c.obj
- .debug_info    0x0000b4de      0x211 CMakeFiles/DCDC_program.dir/Hardware/oled/oled_show.c.obj
+ .debug_info    0x00008013      0x850 CMakeFiles/DCDC_program.dir/Core/Src/main.c.obj
+ .debug_info    0x00008863      0x432 CMakeFiles/DCDC_program.dir/Core/Src/gpio.c.obj
+ .debug_info    0x00008c95      0x7fc CMakeFiles/DCDC_program.dir/Core/Src/adc.c.obj
+ .debug_info    0x00009491      0x2cf CMakeFiles/DCDC_program.dir/Core/Src/dma.c.obj
+ .debug_info    0x00009760      0xacd CMakeFiles/DCDC_program.dir/Core/Src/tim.c.obj
+ .debug_info    0x0000a22d      0x7a0 CMakeFiles/DCDC_program.dir/Core/Src/stm32f1xx_it.c.obj
+ .debug_info    0x0000a9cd      0x1f1 CMakeFiles/DCDC_program.dir/Core/Src/stm32f1xx_hal_msp.c.obj
+ .debug_info    0x0000abbe       0x30 CMakeFiles/DCDC_program.dir/startup_stm32f103xb.s.obj
+ .debug_info    0x0000abee      0x653 CMakeFiles/DCDC_program.dir/Hardware/oled/oled.c.obj
+ .debug_info    0x0000b241      0x2af CMakeFiles/DCDC_program.dir/Hardware/switches/switches.c.obj
+ .debug_info    0x0000b4f0      0x21b CMakeFiles/DCDC_program.dir/Hardware/oled/oled_show.c.obj
 
-.debug_abbrev   0x00000000     0x281b
+.debug_abbrev   0x00000000     0x2824
  .debug_abbrev  0x00000000      0x13f cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f1xx.c.obj
  .debug_abbrev  0x0000013f      0x225 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c.obj
  .debug_abbrev  0x00000364      0x249 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c.obj
@@ -4036,8 +4047,8 @@ LOAD linker stubs
  .debug_abbrev  0x0000226c       0xdb CMakeFiles/DCDC_program.dir/Core/Src/stm32f1xx_hal_msp.c.obj
  .debug_abbrev  0x00002347       0x24 CMakeFiles/DCDC_program.dir/startup_stm32f103xb.s.obj
  .debug_abbrev  0x0000236b      0x259 CMakeFiles/DCDC_program.dir/Hardware/oled/oled.c.obj
- .debug_abbrev  0x000025c4      0x18a CMakeFiles/DCDC_program.dir/Hardware/switches/switches.c.obj
- .debug_abbrev  0x0000274e       0xcd CMakeFiles/DCDC_program.dir/Hardware/oled/oled_show.c.obj
+ .debug_abbrev  0x000025c4      0x18c CMakeFiles/DCDC_program.dir/Hardware/switches/switches.c.obj
+ .debug_abbrev  0x00002750       0xd4 CMakeFiles/DCDC_program.dir/Hardware/oled/oled_show.c.obj
 
 .debug_aranges  0x00000000      0xd30
  .debug_aranges
@@ -4132,7 +4143,7 @@ LOAD linker stubs
  .debug_rnglists
                 0x000009f2       0x1b CMakeFiles/DCDC_program.dir/Hardware/oled/oled_show.c.obj
 
-.debug_macro    0x00000000    0x18166
+.debug_macro    0x00000000    0x181d1
  .debug_macro   0x00000000      0x1ad cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f1xx.c.obj
  .debug_macro   0x000001ad      0xade cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f1xx.c.obj
  .debug_macro   0x00000c8b       0x2e cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f1xx.c.obj
@@ -4181,19 +4192,22 @@ LOAD linker stubs
  .debug_macro   0x000169d7      0x1ad cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
  .debug_macro   0x00016b84      0x1ae cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
  .debug_macro   0x00016d32      0x1ad cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj
- .debug_macro   0x00016edf      0x20a CMakeFiles/DCDC_program.dir/Core/Src/main.c.obj
- .debug_macro   0x000170e9       0x64 CMakeFiles/DCDC_program.dir/Core/Src/main.c.obj
- .debug_macro   0x0001714d      0x1c6 CMakeFiles/DCDC_program.dir/Core/Src/gpio.c.obj
- .debug_macro   0x00017313      0x1c6 CMakeFiles/DCDC_program.dir/Core/Src/adc.c.obj
- .debug_macro   0x000174d9      0x1c6 CMakeFiles/DCDC_program.dir/Core/Src/dma.c.obj
- .debug_macro   0x0001769f      0x1d4 CMakeFiles/DCDC_program.dir/Core/Src/tim.c.obj
- .debug_macro   0x00017873      0x1d4 CMakeFiles/DCDC_program.dir/Core/Src/stm32f1xx_it.c.obj
- .debug_macro   0x00017a47      0x1bc CMakeFiles/DCDC_program.dir/Core/Src/stm32f1xx_hal_msp.c.obj
- .debug_macro   0x00017c03      0x1c3 CMakeFiles/DCDC_program.dir/Hardware/oled/oled.c.obj
- .debug_macro   0x00017dc6      0x1c6 CMakeFiles/DCDC_program.dir/Hardware/switches/switches.c.obj
- .debug_macro   0x00017f8c      0x1da CMakeFiles/DCDC_program.dir/Hardware/oled/oled_show.c.obj
+ .debug_macro   0x00016edf      0x20e CMakeFiles/DCDC_program.dir/Core/Src/main.c.obj
+ .debug_macro   0x000170ed       0x64 CMakeFiles/DCDC_program.dir/Core/Src/main.c.obj
+ .debug_macro   0x00017151       0x16 CMakeFiles/DCDC_program.dir/Core/Src/main.c.obj
+ .debug_macro   0x00017167       0x10 CMakeFiles/DCDC_program.dir/Core/Src/main.c.obj
+ .debug_macro   0x00017177      0x1c6 CMakeFiles/DCDC_program.dir/Core/Src/gpio.c.obj
+ .debug_macro   0x0001733d      0x1c6 CMakeFiles/DCDC_program.dir/Core/Src/adc.c.obj
+ .debug_macro   0x00017503      0x1c6 CMakeFiles/DCDC_program.dir/Core/Src/dma.c.obj
+ .debug_macro   0x000176c9      0x1d9 CMakeFiles/DCDC_program.dir/Core/Src/tim.c.obj
+ .debug_macro   0x000178a2       0x10 CMakeFiles/DCDC_program.dir/Core/Src/tim.c.obj
+ .debug_macro   0x000178b2      0x1d4 CMakeFiles/DCDC_program.dir/Core/Src/stm32f1xx_it.c.obj
+ .debug_macro   0x00017a86      0x1bc CMakeFiles/DCDC_program.dir/Core/Src/stm32f1xx_hal_msp.c.obj
+ .debug_macro   0x00017c42      0x1c3 CMakeFiles/DCDC_program.dir/Hardware/oled/oled.c.obj
+ .debug_macro   0x00017e05      0x1e8 CMakeFiles/DCDC_program.dir/Hardware/switches/switches.c.obj
+ .debug_macro   0x00017fed      0x1e4 CMakeFiles/DCDC_program.dir/Hardware/oled/oled_show.c.obj
 
-.debug_line     0x00000000     0xe91d
+.debug_line     0x00000000     0xe97a
  .debug_line    0x00000000      0x60f cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f1xx.c.obj
  .debug_line    0x0000060f      0xe65 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c.obj
  .debug_line    0x00001474      0xb87 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c.obj
@@ -4205,63 +4219,63 @@ LOAD linker stubs
  .debug_line    0x0000519e      0xa1c cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
  .debug_line    0x00005bba     0x3343 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
  .debug_line    0x00008efd     0x16df cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj
- .debug_line    0x0000a5dc      0x705 CMakeFiles/DCDC_program.dir/Core/Src/main.c.obj
- .debug_line    0x0000ace1      0x5c5 CMakeFiles/DCDC_program.dir/Core/Src/gpio.c.obj
- .debug_line    0x0000b2a6      0x655 CMakeFiles/DCDC_program.dir/Core/Src/adc.c.obj
- .debug_line    0x0000b8fb      0x58c CMakeFiles/DCDC_program.dir/Core/Src/dma.c.obj
- .debug_line    0x0000be87      0x771 CMakeFiles/DCDC_program.dir/Core/Src/tim.c.obj
- .debug_line    0x0000c5f8      0x6e2 CMakeFiles/DCDC_program.dir/Core/Src/stm32f1xx_it.c.obj
- .debug_line    0x0000ccda      0x591 CMakeFiles/DCDC_program.dir/Core/Src/stm32f1xx_hal_msp.c.obj
- .debug_line    0x0000d26b       0x78 CMakeFiles/DCDC_program.dir/startup_stm32f103xb.s.obj
- .debug_line    0x0000d2e3      0x8ce CMakeFiles/DCDC_program.dir/Hardware/oled/oled.c.obj
- .debug_line    0x0000dbb1      0x6b4 CMakeFiles/DCDC_program.dir/Hardware/switches/switches.c.obj
- .debug_line    0x0000e265      0x6b8 CMakeFiles/DCDC_program.dir/Hardware/oled/oled_show.c.obj
+ .debug_line    0x0000a5dc      0x6ff CMakeFiles/DCDC_program.dir/Core/Src/main.c.obj
+ .debug_line    0x0000acdb      0x5c5 CMakeFiles/DCDC_program.dir/Core/Src/gpio.c.obj
+ .debug_line    0x0000b2a0      0x655 CMakeFiles/DCDC_program.dir/Core/Src/adc.c.obj
+ .debug_line    0x0000b8f5      0x58c CMakeFiles/DCDC_program.dir/Core/Src/dma.c.obj
+ .debug_line    0x0000be81      0x771 CMakeFiles/DCDC_program.dir/Core/Src/tim.c.obj
+ .debug_line    0x0000c5f2      0x6e2 CMakeFiles/DCDC_program.dir/Core/Src/stm32f1xx_it.c.obj
+ .debug_line    0x0000ccd4      0x591 CMakeFiles/DCDC_program.dir/Core/Src/stm32f1xx_hal_msp.c.obj
+ .debug_line    0x0000d265       0x78 CMakeFiles/DCDC_program.dir/startup_stm32f103xb.s.obj
+ .debug_line    0x0000d2dd      0x8ce CMakeFiles/DCDC_program.dir/Hardware/oled/oled.c.obj
+ .debug_line    0x0000dbab      0x717 CMakeFiles/DCDC_program.dir/Hardware/switches/switches.c.obj
+ .debug_line    0x0000e2c2      0x6b8 CMakeFiles/DCDC_program.dir/Hardware/oled/oled_show.c.obj
 
-.debug_str      0x00000000    0x8a2c5
- .debug_str     0x00000000    0x8a2c5 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f1xx.c.obj
+.debug_str      0x00000000    0x8a2da
+ .debug_str     0x00000000    0x8a2da cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f1xx.c.obj
                               0x865b2 (size before relaxing)
- .debug_str     0x0008a2c5        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c.obj
+ .debug_str     0x0008a2da        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c.obj
                               0x86c96 (size before relaxing)
- .debug_str     0x0008a2c5        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c.obj
+ .debug_str     0x0008a2da        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c.obj
                               0x86c66 (size before relaxing)
- .debug_str     0x0008a2c5        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj
+ .debug_str     0x0008a2da        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj
                               0x86ce5 (size before relaxing)
- .debug_str     0x0008a2c5        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
+ .debug_str     0x0008a2da        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
                               0x869e1 (size before relaxing)
- .debug_str     0x0008a2c5        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c.obj
+ .debug_str     0x0008a2da        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c.obj
                               0x86731 (size before relaxing)
- .debug_str     0x0008a2c5        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj
+ .debug_str     0x0008a2da        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj
                               0x86938 (size before relaxing)
- .debug_str     0x0008a2c5        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj
+ .debug_str     0x0008a2da        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj
                               0x8695b (size before relaxing)
- .debug_str     0x0008a2c5        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
+ .debug_str     0x0008a2da        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
                               0x86c31 (size before relaxing)
- .debug_str     0x0008a2c5        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
+ .debug_str     0x0008a2da        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
                               0x879e3 (size before relaxing)
- .debug_str     0x0008a2c5        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj
+ .debug_str     0x0008a2da        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj
                               0x871ef (size before relaxing)
- .debug_str     0x0008a2c5        0x0 CMakeFiles/DCDC_program.dir/Core/Src/main.c.obj
-                              0x86d94 (size before relaxing)
- .debug_str     0x0008a2c5        0x0 CMakeFiles/DCDC_program.dir/Core/Src/gpio.c.obj
+ .debug_str     0x0008a2da        0x0 CMakeFiles/DCDC_program.dir/Core/Src/main.c.obj
+                              0x86dc9 (size before relaxing)
+ .debug_str     0x0008a2da        0x0 CMakeFiles/DCDC_program.dir/Core/Src/gpio.c.obj
                               0x86b06 (size before relaxing)
- .debug_str     0x0008a2c5        0x0 CMakeFiles/DCDC_program.dir/Core/Src/adc.c.obj
+ .debug_str     0x0008a2da        0x0 CMakeFiles/DCDC_program.dir/Core/Src/adc.c.obj
                               0x86bca (size before relaxing)
- .debug_str     0x0008a2c5        0x0 CMakeFiles/DCDC_program.dir/Core/Src/dma.c.obj
+ .debug_str     0x0008a2da        0x0 CMakeFiles/DCDC_program.dir/Core/Src/dma.c.obj
                               0x86a5d (size before relaxing)
- .debug_str     0x0008a2c5        0x0 CMakeFiles/DCDC_program.dir/Core/Src/tim.c.obj
-                              0x8722b (size before relaxing)
- .debug_str     0x0008a2c5        0x0 CMakeFiles/DCDC_program.dir/Core/Src/stm32f1xx_it.c.obj
+ .debug_str     0x0008a2da        0x0 CMakeFiles/DCDC_program.dir/Core/Src/tim.c.obj
+                              0x87246 (size before relaxing)
+ .debug_str     0x0008a2da        0x0 CMakeFiles/DCDC_program.dir/Core/Src/stm32f1xx_it.c.obj
                               0x86da6 (size before relaxing)
- .debug_str     0x0008a2c5        0x0 CMakeFiles/DCDC_program.dir/Core/Src/stm32f1xx_hal_msp.c.obj
+ .debug_str     0x0008a2da        0x0 CMakeFiles/DCDC_program.dir/Core/Src/stm32f1xx_hal_msp.c.obj
                               0x86787 (size before relaxing)
- .debug_str     0x0008a2c5        0x0 CMakeFiles/DCDC_program.dir/startup_stm32f103xb.s.obj
+ .debug_str     0x0008a2da        0x0 CMakeFiles/DCDC_program.dir/startup_stm32f103xb.s.obj
                                  0xaa (size before relaxing)
- .debug_str     0x0008a2c5        0x0 CMakeFiles/DCDC_program.dir/Hardware/oled/oled.c.obj
+ .debug_str     0x0008a2da        0x0 CMakeFiles/DCDC_program.dir/Hardware/oled/oled.c.obj
                               0x867f3 (size before relaxing)
- .debug_str     0x0008a2c5        0x0 CMakeFiles/DCDC_program.dir/Hardware/switches/switches.c.obj
-                              0x8691d (size before relaxing)
- .debug_str     0x0008a2c5        0x0 CMakeFiles/DCDC_program.dir/Hardware/oled/oled_show.c.obj
-                              0x868d5 (size before relaxing)
+ .debug_str     0x0008a2da        0x0 CMakeFiles/DCDC_program.dir/Hardware/switches/switches.c.obj
+                              0x86985 (size before relaxing)
+ .debug_str     0x0008a2da        0x0 CMakeFiles/DCDC_program.dir/Hardware/oled/oled_show.c.obj
+                              0x868ee (size before relaxing)
 
 .debug_frame    0x00000000     0x347c
  .debug_frame   0x00000000       0x58 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f1xx.c.obj

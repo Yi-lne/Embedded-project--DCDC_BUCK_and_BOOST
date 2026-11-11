@@ -177,28 +177,32 @@ void HAL_TIM_Base_MspDeInit(TIM_HandleTypeDef* tim_baseHandle)
 }
 
 /* USER CODE BEGIN 1 */
+
+/*
+ * 拨动开关定时器消抖回调函数，周期20ms
+ * */
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
-    //处理buck_adj
+    //控制buck_adj芯片开关
     if(htim == &htim2){
-        if(buck_adj_get_now_switch_state() == 1 && buck_adj_get_last_switch_state() == 0){
+        if(buck_adj_get_now_switch_state() == SWITCH_OPEN && buck_adj_get_last_switch_state() == SWITCH_CLOSE){
             buck_adj_driver_on();
-            buck_adj_set_now_switches_state(1);
-        }else if(buck_adj_get_now_switch_state() == 0 && buck_adj_get_last_switch_state() == 1){
+            buck_adj_set_now_switch_state(SWITCH_OPEN);
+        }else if(buck_adj_get_now_switch_state() == SWITCH_CLOSE && buck_adj_get_last_switch_state() == SWITCH_OPEN){
             buck_adj_driver_off();
-            buck_adj_set_now_switches_state(0);
+            buck_adj_set_now_switch_state(SWITCH_CLOSE);
         }
         HAL_TIM_Base_Stop_IT(&htim2);
     }
 
-    //处理boost_adj
+    //控制boost_adj芯片开关
     if(htim == &htim3){
-        if(boost_adj_get_now_switch_state() == 1 && boost_adj_get_last_switch_state() == 0){
+        if(boost_adj_get_now_switch_state() == SWITCH_OPEN && boost_adj_get_last_switch_state() == SWITCH_CLOSE){
             boost_adj_driver_on();
-            boost_adj_set_now_switches_state(1);
-        }else if(boost_adj_get_now_switch_state() == 0 && boost_adj_get_last_switch_state() == 1){
+            boost_adj_set_now_switch_state(SWITCH_OPEN);
+        }else if(boost_adj_get_now_switch_state() == SWITCH_CLOSE && boost_adj_get_last_switch_state() == SWITCH_OPEN){
             boost_adj_driver_off();
-            boost_adj_set_now_switches_state(0);
+            boost_adj_set_now_switch_state(SWITCH_CLOSE);
         }
         HAL_TIM_Base_Stop_IT(&htim3);
     }

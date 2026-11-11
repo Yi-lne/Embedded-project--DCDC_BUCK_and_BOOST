@@ -209,7 +209,7 @@ void EXTI0_IRQHandler(void)
   /* USER CODE BEGIN EXTI0_IRQn 0 */
 
   /* USER CODE END EXTI0_IRQn 0 */
-  HAL_GPIO_EXTI_IRQHandler(boost_adj_switch_Pin);
+  HAL_GPIO_EXTI_IRQHandler(BOOST_ADJ_SWITCH_Pin);
   /* USER CODE BEGIN EXTI0_IRQn 1 */
 
   /* USER CODE END EXTI0_IRQn 1 */
@@ -265,20 +265,23 @@ void EXTI15_10_IRQHandler(void)
   /* USER CODE BEGIN EXTI15_10_IRQn 0 */
 
   /* USER CODE END EXTI15_10_IRQn 0 */
-  HAL_GPIO_EXTI_IRQHandler(buck_adj_switch_Pin);
+  HAL_GPIO_EXTI_IRQHandler(BUCK_ADJ_SWITCH_Pin);
   /* USER CODE BEGIN EXTI15_10_IRQn 1 */
 
   /* USER CODE END EXTI15_10_IRQn 1 */
 }
 
 /* USER CODE BEGIN 1 */
-    void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
-    {
-        if(GPIO_Pin == buck_adj_switch_Pin){
-            HAL_TIM_Base_Start_IT(&htim2);
-        }
-        if(GPIO_Pin == boost_adj_switch_Pin){
-            HAL_TIM_Base_Start_IT(&htim3);
-        }
+/*
+ * 拨动开关触发20ms定时器以消抖
+ * */
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+    if(GPIO_Pin == BUCK_ADJ_SWITCH_Pin){
+        HAL_TIM_Base_Start_IT(&htim2);
     }
+    if(GPIO_Pin == BOOST_ADJ_SWITCH_Pin){
+        HAL_TIM_Base_Start_IT(&htim3);
+    }
+}
 /* USER CODE END 1 */

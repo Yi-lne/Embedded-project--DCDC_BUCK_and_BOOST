@@ -50,36 +50,36 @@ void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(boost_adj_driver_GPIO_Port, boost_adj_driver_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(BOOST_ADJ_DRIVER_GPIO_Port, BOOST_ADJ_DRIVER_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(buck_adj_driver_GPIO_Port, buck_adj_driver_Pin, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(BUCK_ADJ_DRIVER_GPIO_Port, BUCK_ADJ_DRIVER_Pin, GPIO_PIN_SET);
 
-  /*Configure GPIO pin : boost_adj_switch_Pin */
-  GPIO_InitStruct.Pin = boost_adj_switch_Pin;
+  /*Configure GPIO pin : BOOST_ADJ_SWITCH_Pin */
+  GPIO_InitStruct.Pin = BOOST_ADJ_SWITCH_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING_FALLING;
   GPIO_InitStruct.Pull = GPIO_PULLDOWN;
-  HAL_GPIO_Init(boost_adj_switch_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(BOOST_ADJ_SWITCH_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : boost_adj_driver_Pin */
-  GPIO_InitStruct.Pin = boost_adj_driver_Pin;
+  /*Configure GPIO pin : BOOST_ADJ_DRIVER_Pin */
+  GPIO_InitStruct.Pin = BOOST_ADJ_DRIVER_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(boost_adj_driver_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(BOOST_ADJ_DRIVER_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : buck_adj_driver_Pin */
-  GPIO_InitStruct.Pin = buck_adj_driver_Pin;
+  /*Configure GPIO pin : BUCK_ADJ_DRIVER_Pin */
+  GPIO_InitStruct.Pin = BUCK_ADJ_DRIVER_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(buck_adj_driver_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(BUCK_ADJ_DRIVER_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : buck_adj_switch_Pin */
-  GPIO_InitStruct.Pin = buck_adj_switch_Pin;
+  /*Configure GPIO pin : BUCK_ADJ_SWITCH_Pin */
+  GPIO_InitStruct.Pin = BUCK_ADJ_SWITCH_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING_FALLING;
   GPIO_InitStruct.Pull = GPIO_PULLDOWN;
-  HAL_GPIO_Init(buck_adj_switch_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(BUCK_ADJ_SWITCH_GPIO_Port, &GPIO_InitStruct);
 
   /* EXTI interrupt init*/
   HAL_NVIC_SetPriority(EXTI0_IRQn, 0, 0);

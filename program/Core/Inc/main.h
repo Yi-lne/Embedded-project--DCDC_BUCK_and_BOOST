@@ -57,22 +57,22 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define boost_adj_switch_Pin GPIO_PIN_0
-#define boost_adj_switch_GPIO_Port GPIOA
-#define boost_adj_switch_EXTI_IRQn EXTI0_IRQn
-#define boost_adj_adc_Pin GPIO_PIN_2
-#define boost_adj_adc_GPIO_Port GPIOA
-#define boost_adj_driver_Pin GPIO_PIN_3
-#define boost_adj_driver_GPIO_Port GPIOA
-#define voltmeter_adc_Pin GPIO_PIN_4
-#define voltmeter_adc_GPIO_Port GPIOA
-#define buck_adj_adc_Pin GPIO_PIN_6
-#define buck_adj_adc_GPIO_Port GPIOA
-#define buck_adj_driver_Pin GPIO_PIN_10
-#define buck_adj_driver_GPIO_Port GPIOB
-#define buck_adj_switch_Pin GPIO_PIN_11
-#define buck_adj_switch_GPIO_Port GPIOB
-#define buck_adj_switch_EXTI_IRQn EXTI15_10_IRQn
+#define BOOST_ADJ_SWITCH_Pin GPIO_PIN_0
+#define BOOST_ADJ_SWITCH_GPIO_Port GPIOA
+#define BOOST_ADJ_SWITCH_EXTI_IRQn EXTI0_IRQn
+#define BOOST_ADJ_ADC_Pin GPIO_PIN_2
+#define BOOST_ADJ_ADC_GPIO_Port GPIOA
+#define BOOST_ADJ_DRIVER_Pin GPIO_PIN_3
+#define BOOST_ADJ_DRIVER_GPIO_Port GPIOA
+#define VOLTMETER_ADC_Pin GPIO_PIN_4
+#define VOLTMETER_ADC_GPIO_Port GPIOA
+#define BUCK_ADJ_ADC_Pin GPIO_PIN_6
+#define BUCK_ADJ_ADC_GPIO_Port GPIOA
+#define BUCK_ADJ_DRIVER_Pin GPIO_PIN_10
+#define BUCK_ADJ_DRIVER_GPIO_Port GPIOB
+#define BUCK_ADJ_SWITCH_Pin GPIO_PIN_11
+#define BUCK_ADJ_SWITCH_GPIO_Port GPIOB
+#define BUCK_ADJ_SWITCH_EXTI_IRQn EXTI15_10_IRQn
 
 /* USER CODE BEGIN Private defines */
 

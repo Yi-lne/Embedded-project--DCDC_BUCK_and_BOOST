@@ -48,7 +48,8 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-uint16_t adc_data[3] = {0}; //adc_data[0]: buck_adj, adc_data[1]: boost_adj, adc_data[2]: voltmeter
+//adc_data[0]: buck_adj, adc_data[1]: boost_adj, adc_data[2]: voltmeter
+volatile uint16_t adc_data[3] = {0};
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -96,24 +97,25 @@ int main(void)
   MX_TIM2_Init();
   MX_ADC1_Init();
   /* USER CODE BEGIN 2 */
-    HAL_ADCEx_Calibration_Start(&hadc1);
+  HAL_ADCEx_Calibration_Start(&hadc1);
   OLED_Init();
-    OLED_ShowString(1, 1, "DCDC_BUCK_BOOST");
-    OLED_ShowString(2, 1, "BUCK_ADJ :");
-    OLED_ShowString(3, 1, "BOOST_ADJ:");
-    OLED_ShowString(4, 1, "Voltmeter:");
+  OLED_ShowString(1, 1, "DCDC_BUCK_BOOST");
+  OLED_ShowString(2, 1, "BUCK_ADJ :");
+  OLED_ShowString(3, 1, "BOOST_ADJ:");
+  OLED_ShowString(4, 1, "Voltmeter:");
 
-    HAL_ADC_Start_DMA(&hadc1, (uint32_t*)adc_data, 3);
+  HAL_ADC_Start_DMA(&hadc1, (uint32_t*)adc_data, 3);
 
-
-    switches_state_init();
+  switches_state_init();
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-      voltage_calculation();
+      //电压转换
+      voltage_conversion();
+      //电压显示
       voltage_display();
 
     /* USER CODE END WHILE */
