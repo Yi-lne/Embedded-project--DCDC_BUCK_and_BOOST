@@ -1,0 +1,6 @@
+D:/STM32Projects/Projects/DCDC_BUCK_and_BOOST/program/build/Debug/CMakeFiles/DCDC_program.dir
+D:/STM32Projects/Projects/DCDC_BUCK_and_BOOST/program/build/Debug/CMakeFiles/edit_cache.dir
+D:/STM32Projects/Projects/DCDC_BUCK_and_BOOST/program/build/Debug/CMakeFiles/rebuild_cache.dir
+D:/STM32Projects/Projects/DCDC_BUCK_and_BOOST/program/build/Debug/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir
+D:/STM32Projects/Projects/DCDC_BUCK_and_BOOST/program/build/Debug/cmake/stm32cubemx/CMakeFiles/edit_cache.dir
+D:/STM32Projects/Projects/DCDC_BUCK_and_BOOST/program/build/Debug/cmake/stm32cubemx/CMakeFiles/rebuild_cache.dir

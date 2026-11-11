@@ -1,0 +1,10 @@
+"D:\CLion\CLion 2024.1\bin\cmake\win\x64\bin\cmake.exe" --preset Debug -S D:\STM32Projects\Projects\DCDC_BUCK_and_BOOST\program -B D:\STM32Projects\Projects\DCDC_BUCK_and_BOOST\program\build\Debug
+Preset CMake variables:
+
+  CMAKE_BUILD_TYPE="Debug"
+  CMAKE_TOOLCHAIN_FILE:FILEPATH="D:/STM32Projects/Projects/DCDC_BUCK_and_BOOST/program/cmake/gcc-arm-none-eabi.cmake"
+
+Build type: Debug
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: D:/STM32Projects/Projects/DCDC_BUCK_and_BOOST/program/build/Debug
